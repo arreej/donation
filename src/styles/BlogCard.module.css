@@ -3,10 +3,12 @@
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
-  width: calc(33.33% - 20px); /* Adjust card width for larger screens */
+  /* width: calc(33.33% - 20px);  */
 }
 .image {
   width: 100%;
+  min-height: 200px;
+  object-fit: cover;
 }
 .title {
   font-size: 1.5rem;
@@ -22,18 +24,4 @@
 .publishedDate {
   font-size: 0.9rem;
   color: #777;
-}
-
-@media (max-width: 768px) {
-  /* Adjust card width for smaller screens */
-  .card {
-    width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  /* Adjust card width for even smaller screens */
-  .card {
-    width: 100%;
-  }
 }
