@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
     <Head>
-      <title>NGO Donations</title>
+      <title>Helping Hands</title>
       <meta name="description" content="Welcome to my awesome landing page" />
       <link rel="icon" href="/favicon.ico" />
     </Head>

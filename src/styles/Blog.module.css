@@ -3,13 +3,16 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
-}.card {
+}
+.card {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
 }
-
+.h1 {
+  text-align: center;
+}
 .title {
   font-size: 1.5rem;
   font-weight: bold;
