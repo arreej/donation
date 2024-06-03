@@ -5,11 +5,21 @@ import Link from 'next/link';
 import ImageCarousel from '../src/components/ImageCarousel';
 
 export default function About() {
+  const images = [
+    // '/achievements.jpg',
+    '/clothes.jpg',
+    '/clothesd.jpg',
+    '/clothes.jpg',
+    '/food.jpg',
+    '/medical.jpg',
+    '/water.jpg',
+    '/winter.jpg',
+  ];
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>Donation Cancelled</title>
+        <title>Our Achievements</title>
         <meta name="description" content="Your donation was not completed" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -17,9 +27,13 @@ export default function About() {
       <Navbar />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Donation Cancelled</h1>
-        <p>Your donation was not completed. Please try again.</p>
+        <h1 className={styles.title}>Donate for the right cause</h1>
+        <p>You can be the reason behind someone's smile</p>
         <Link className={styles.h2} href="/donate">Back to Donations</Link>
+        <div>
+          <h1>Image Carousel Example</h1>
+          <ImageCarousel images={images} />
+        </div>
       </main>
 
       <footer className={styles.footer}>
