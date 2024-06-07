@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+.main {
+  min-height: 61vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  background-repeat: no-repeat;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.mainCard {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 346px;
+  height: 374px;
+  background: white url("/bg-pattern-card.svg") no-repeat top;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.profilePic {
+  margin-top: 19%;
+  border-radius: 50%;
+  border: 6px solid white;
+}
+
+.hr {
+  background-color: #aaa5;
+  height: 1px;
+  width: 100%;
+}
+
+.mainCard > p:nth-child(2),
+.dataContainer > div > p:nth-child(1) {
+  color: hsl(229, 23%, 23%);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mainCard > p:nth-child(3) {
+  margin-top: -15px;
+  color: hsl(227, 10%, 46%);
+}
+.mainCard > p > span {
+  color: hsl(0, 0%, 59%);
+}
+
+.dataContainer > div > p:nth-child(2) {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: hsl(227, 10%, 46%);
+}
+
+.dataContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.reference {
+  position: absolute;
+  bottom: -50px;
+  text-align: center;
+  left: 1px;
+  right: 1px;
+}
+
+@media screen and (max-width: 375px) {
+  .main {
+    background: url("/bg-pattern-top.svg") top -35vw left -50vw / 100% auto,
+      url("/bg-pattern-bottom.svg") bottom -35vw right -50vw / 100% auto;
+    background-repeat: no-repeat;
+    background-color: hsl(185, 75%, 39%);
+  }
+}

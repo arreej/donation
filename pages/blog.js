@@ -39,7 +39,7 @@ const BlogPage = ({ posts }) => {
 
 export async function getStaticProps() {
     try {
-      const res = await axios.get(`http://127.0.0.1:1337/api/articles?populate=*`);
+      const res = await axios.get(`http://localhost:4200/api/articles?populate=*`);
       const posts = res.data.data; // Extract data array from response
       console.log(posts.data,"----")
       return {

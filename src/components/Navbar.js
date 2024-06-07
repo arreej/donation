@@ -8,21 +8,29 @@ const Navbar = () => {
         <Link href="/">HelpingHands</Link>
       </div>
       <ul className={styles.navLinks}>
+      <li>
+          <Link href="/signin">Sign In</Link>
+        </li>
         <li>
           <Link href="/about">About</Link>
         </li>
-        <li>
+        {/* <li className={styles.dropdown}>
           <Link href="#features">Features</Link>
-        </li>
+          <ul className={styles.dropdownContent}>
+            <li>
+              <Link href="/feature1">Feature 1</Link>
+            </li>
+            <li>
+              <Link href="/feature2">Feature 2</Link>
+            </li>
+          </ul>
+        </li> */}
         <li>
           <Link href="#contact">Contact</Link>
         </li>
         <li>
-          <Link href="/donate">Donate Now</Link>
+          <Link href="/donate" className={styles.donateButton}>Donate Now</Link>
         </li>
-        {/* <li>
-          <Link href="/blog">Blogs</Link>
-        </li> */}
       </ul>
     </nav>
   );

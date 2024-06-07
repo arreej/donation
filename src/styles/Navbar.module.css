@@ -6,25 +6,113 @@
     padding: 1rem 2rem;
     color: white;
     width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
   
   .logo {
     font-size: 1.5rem;
     font-weight: 600;
   }
+
+  .logo a {
+    text-decoration: none;
+    color: white;
+  }
   
   .navLinks {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 1.5rem;
   }
   
   .navLinks a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
   }
   
   .navLinks a:hover {
     color: #ddd;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+ .donateButton {
+  background-color: #ff6347;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.donateButton:hover {
+  background-color: #ff4500;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #40297b;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1000;
+  list-style: none;
+  padding: 0.5rem 0;
+  min-width: 10rem;
+}
+
+.dropdownContent li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdownContent li a {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.dropdownContent li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
+
+  .navLinks {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navLinks a {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 2rem;
+  }
+
+  .dropdownContent {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+  }
+}
