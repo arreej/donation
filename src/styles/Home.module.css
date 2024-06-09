@@ -4,8 +4,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    width: 50vw;
   }
-  
+  .h2 {
+    font-size: 12px;
+  }
   .header {
     text-align: center;
     margin-top: 2rem;

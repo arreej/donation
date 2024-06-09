@@ -7,6 +7,7 @@
   cursor: default;
   background-repeat: no-repeat;
   font-family: "Kumbh Sans", sans-serif;
+  gap: 3%;
 }
 
 .mainCard {
@@ -20,22 +21,18 @@
   background: white url("/bg-pattern-card.svg") no-repeat top;
   border-radius: 15px;
   text-align: center;
+  border: 2px solid #ddd;
 }
 
 .profilePic {
   margin-top: 19%;
   border-radius: 50%;
   border: 6px solid white;
+  object-fit: cover;
 }
 
-.hr {
-  background-color: #aaa5;
-  height: 1px;
-  width: 100%;
-}
 
-.mainCard > p:nth-child(2),
-.dataContainer > div > p:nth-child(1) {
+.mainCard > p:nth-child(2) {
   color: hsl(229, 23%, 23%);
   font-size: 18px;
   font-weight: 700;
@@ -49,17 +46,6 @@
   color: hsl(0, 0%, 59%);
 }
 
-.dataContainer > div > p:nth-child(2) {
-  font-size: 11px;
-  letter-spacing: 1px;
-  color: hsl(227, 10%, 46%);
-}
-
-.dataContainer {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
 .reference {
   position: absolute;
   bottom: -50px;

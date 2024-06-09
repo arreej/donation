@@ -18,7 +18,7 @@ export default function About() {
   ];
 
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Our Achievements</title>
         <meta name="description" content="Learn about our achievements and meet our team." />
@@ -27,24 +27,26 @@ export default function About() {
 
       <Navbar />
 
-      <main className={styles.main}>
-        <h2>
-          We are providing free medical and surgical care to deserving patients in Pakistan.
-        </h2>
-        <div>
-          <ImageCarousel images={images} />
-        </div>
-        <div>
-          <h1 className={styles.title}>
-            Meet Our Team
-          </h1>
-          <UserCard />
-        </div>
-      </main>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <h2>
+            We are providing free medical and surgical care to deserving patients in Pakistan.
+          </h2>
+          <div>
+            <ImageCarousel images={images} />
+          </div>
+          <div>
+            <h1 >
+              Meet Our Team
+            </h1>
+            <UserCard />
+          </div>
+        </main>
 
-      <footer className={styles.footer}>
-        <p>&copy; 2024 My Organization. All rights reserved.</p>
-      </footer>
-    </div>
+        <footer className={styles.footer}>
+          <p>&copy; 2024 My Organization. All rights reserved.</p>
+        </footer>
+      </div>
+    </>
   );
 }

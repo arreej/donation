@@ -4,52 +4,47 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Define constants for user data
-const USER = {
+const USERS = [
+  {
     name: 'Victor Crest',
     age: 26,
     location: 'London',
     profilePic: '/image-victor.jpg',
-  };
-  
-  const STATS = {
-    followers: '80K',
-    likes: '803K',
-    photos: '1.4K',
-  };
+  },
+  {
+    name: 'Jane Doe',
+    age: 28,
+    location: 'New York',
+    profilePic: '/syd.jpg',
+  },
+  {
+    name: 'John Smith',
+    age: 30,
+    location: 'Sydney',
+    profilePic: '/amir.jpg',
+  },
+];
 
 function UserCard() {
-    return (
-      <main className={styles.main}>
-        <div className={styles.mainCard}>
+  return (
+    <main className={styles.main}>
+      {USERS.map((user, index) => (
+        <div key={index} className={styles.mainCard}>
           <Image
             className={styles.profilePic}
-            src={USER.profilePic}
+            src={user.profilePic}
             width={95}
             height={95}
             alt="profile image"
           />
           <p>
-            {USER.name} <span>{USER.age}</span>
+            {user.name} <span>{user.age}</span>
           </p>
-          <p>{USER.location}</p>
-          <div className={styles.hr} />
-          <div className={styles.dataContainer}>
-            <div>
-              <p>{STATS.followers}</p>
-              <p>Followers</p>
-            </div>
-            <div>
-              <p>{STATS.likes}</p>
-              <p>Likes</p>
-            </div>
-            <div>
-              <p>{STATS.photos}</p>
-              <p>Photos</p>
-            </div>
-          </div>
+          <p>{user.location}</p>
         </div>
-      </main>
-    );
-  }
-  
-  export default UserCard;
+      ))}
+    </main>
+  );
+}
+
+export default UserCard;
