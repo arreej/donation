@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
 .main {
-  min-height: 61vh;
-  display: flex;
+  min-height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
   justify-content: center;
-  align-items: center;
-  cursor: default;
-  background-repeat: no-repeat;
-  font-family: "Kumbh Sans", sans-serif;
-  gap: 3%;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .mainCard {
