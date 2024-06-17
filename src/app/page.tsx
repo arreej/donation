@@ -47,15 +47,16 @@ export default function Home() {
           <h1>Contact</h1>
           <p>
             Get in touch with us at 
-            <a href="mailto:helpinghands@gmail.com">
-              helpinghands@gmail.com
-            </a>.
+            <a href="mailto:helpinghands@gmail.com"> 
+            helpinghands@gmail.com
+            </a>
+            .
           </p>
         </section>
       </main>
 
       <footer className={styles.footer}>
-        <p>&copy; 2024 My Landing Page. All rights reserved.</p>
+        <p>&copy; 2024 Helping Hands. All rights reserved.</p>
       </footer>
     </div>
   </>
